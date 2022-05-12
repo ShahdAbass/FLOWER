@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر للورد</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    
+    <a href="#" class="logo"><span>متجر ورد</span></a>
+
+    <nav class="navbar">
+        <a href="#home">الرئسية</a>
+        <a href="#about">من نحن</a>
+        <a href="#products">منتجاتنا</a>
+        <a href="#review">اراء العملاء</a>
+        <a href="#contact">تواصل معنا</a>
+    </nav>
+
+    <div class="icons">
+        <a id="menu-btn" class="fas fa-bars"></a>
+        <a href="#" id="user-btn"  class="fas fa-user"></a>
+        <a href="#" id="order-btn" class="fas fa-box"></a>
+        <a href="#" id="cart-btn"  class="fas fa-shopping-cart"></a>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+
+<div class="user-account">
+     
+    <section>
+ 
+       <div id="close-account"><span>اغلاق</span></div>
+      
+       <div class="flex">
+ 
+          <form action="user_login.php" method="post">
+             <h3>تسجيل دخول</h3>
+             <input type="email" name="email" required class="box" placeholder="ادخل  البريد الالكتروني" maxlength="50">
+             <input type="password" name="pass" required class="box" placeholder="ادخل كلمه السر" maxlength="20">
+             <input type="submit" value="تسجيل دخول" name="login" class="btn">
+          </form>
+ 
+          <form action="users_accounts.php" method="post">
+             <h3>سجل الان</h3>
+             <input type="text" name="name" required class="box" placeholder="ادخل الاسم" maxlength="20">
+             <input type="email" name="email" required class="box" placeholder="ادخل اليربد الالكتروني" maxlength="50">
+             <input type="password" name="pass" required class="box" placeholder="ادخل كلمه السر" maxlength="20">
+             <input type="password" name="cpass" required class="box" placeholder="اكد رقمك السري" maxlength="20">
+             <input type="submit" value="سجل الان" name="register" class="btn">
+          </form>
+ 
+       </div>
+ 
+    </section>
+ 
+ </div>
+ 
+ <div class="my-orders">
+ 
+    <section>
+ 
+       <div id="close-orders"><span>اغلاق</span></div>
+ 
+       <h3 class="title">طلباتي </h3>
+ 
+       <div class="box">
+          <p>التاريخ : <span>06/04/2022</span> </p>
+          <p>الاسم: <span>علي</span> </p>
+          <p>الرقم : <span>+9664567890</span></p>
+          <p>العنوان : <span>المملكه العربيه السعوديه, الرياض, شارع المطار</span></p>
+          <p>طريقه الدفع: <span>الدفع عند الاستلام</span></p>
+          <p>طلباتي : <span>ورد نرجس, ورد ياسمين, ورد فل</span></p>
+          <p>المبلغ الكلي : <span>$11/-</span></p>
+          <p>حاله السداد : <span style="color: var(--red);">قيد الانتظار</span> </p>
+       </div>
+ 
+ 
+    </section>
+ 
+ </div>
+ 
+ <div class="shopping-cart">
+ 
+    <section>
+ 
+       <div id="close-cart"><span>اغلاق</span></div>
+ 
+       <div class="box">
+          <a href="#" class="fas fa-times"></a>
+          <img src="images/pizza-1.jpg" alt="">
+          <div class="content">
+             <p>ورد ياسمين<span>( $3/- x 2 )</span></p>
+             <form action="" method="post">
+                <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+                <button type="submit" class="fas fa-edit" name="update_qty"></button>
+             </form>
+          </div>
+       </div>
+ 
+       <div class="box">
+          <a href="#" class="fas fa-times"></a>
+          <img src="images/pizza-3.jpg" alt="">
+          <div class="content">
+             <p>ورد فل<span>( $2/- x 1 )</span></p>
+             <form action="" method="post">
+                <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+                <button type="submit" class="fas fa-edit" name="update_qty"></button>
+             </form>
+          </div>
+       </div>
+ 
+       <div class="box">
+          <a href="#" class="fas fa-times"></a>
+          <img src="images/pizza-6.jpg" alt="">
+          <div class="content">
+             <p>ورد نرجس<span>( $4/- x 2 )</span></p>
+             <form action="" method="post">
+                <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+                <button type="submit" class="fas fa-edit" name="update_qty"></button>
+             </form>
+          </div>
+       </div>
+ 
+ 
+       <a href="#order" class="btn">اطلب الان</a>
+ 
+    </section>
+ 
+ </div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>ورد طبيعي</h3>
+        <span> ورد طبيعي و جميل </span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, qui totam. Iusto, mollitia libero, sit tenetur illo cumque nostrum .</p>
+        <a href="#" class="btn">تسوق الان</a>
+    </div>
+    
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>من </span> نحن</h1>
+
+    <div class="row">
+
+        <div class="video-container">
+            <video src="images/about-vid.mp4" loop autoplay muted></video>
+            <h3>افضل متجر ورد</h3>
+        </div>
+
+        <div class="content">
+            <h3>لماذا يجب ان تختارنا؟</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem cumque sit nemo pariatur corporis perspiciatis aspernatur a ullam repudiandae autem asperiores quibusdam omnis commodi alias repellat illum, unde optio temporibus.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium ea est commodi incidunt magni quia molestias perspiciatis, unde repudiandae quidem.</p>
+            <a href="#" class="btn">اقرا المزيد</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <img src="images/icon-1.png" alt="">
+        <div class="info">
+            <h3>توصيل مجان</h3>
+            <span>علي كل الطلبات</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-2.png" alt="">
+        <div class="info">
+            <h3>10ايام للاسترجاع  </h3>
+            <span>ضمان استعاده الاموال</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-3.png" alt="">
+        <div class="info">
+            <h3>عروض وهدايا</h3>
+            <span>علي كل الطلبات</span>
+        </div>
+    </div>
+
+    <div class="icons">
+        <img src="images/icon-4.png" alt="">
+        <div class="info">
+            <h3>دفع  امن</h3>
+            <span>محمي بواسطه بيبال</span>
+        </div>
+    </div>
+   
+</section>
+
+<!-- icons section ends -->
+
+<!-- prodcuts section starts  -->
+
+<section class="products" id="products">
+
+    <h1 class="heading">احدث  <span>المنتجات</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="images/img-1.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">اضف الي السله</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>اناء للورد</h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-15%</span>
+            <div class="image">
+                <img src="images/img-2.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">اضف الي السله</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>اناء للورد</h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-5%</span>
+            <div class="image">
+                <img src="images/img-3.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">اضف الي السله</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>اناء للورد</h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-20%</span>
+            <div class="image">
+                <img src="images/img-4.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">اضف الي السله</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>اناء للورد</h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-17%</span>
+            <div class="image">
+                <img src="images/img-5.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">اضف الي السله</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>اناء للورد</h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-3%</span>
+            <div class="image">
+                <img src="images/img-6.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">اضف الي السله</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>اناء للورد</h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-18%</span>
+            <div class="image">
+                <img src="images/img-7.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">اضف الي السله</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>اناء للورد</h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="image">
+                <img src="images/img-8.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">اضف الي السله</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>اناء للورد</h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span class="discount">-5%</span>
+            <div class="image">
+                <img src="images/img-9.jpg" alt="">
+                <div class="icons">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="cart-btn">اضف الي السله</a>
+                    <a href="#" class="fas fa-share"></a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>اناء للورد</h3>
+                <div class="price"> $12.99 <span>$15.99</span> </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- prodcuts section ends -->
+
+<!-- order section starts  -->
+
+<section class="order" id="order">
+
+    <h1 class="heading">اطلب <span>الان</span></h1>
+ 
+    <form action="admin_orders.php" method="post">
+ 
+       <div class="flex">
+          <div class="inputBox">
+             <span>الاسم:</span>
+             <input type="text" name="name" class="box" required placeholder="ادخل اسمك" maxlength="20">
+          </div>
+          <div class="inputBox">
+             <span>الرقم :</span>
+             <input type="number" name="number" class="box" required placeholder="ادخل رقمك" min="0">
+          </div>
+          <div class="inputBox">
+             <span>طريقه الدفع</span>
+             <select name="method" class="box">
+                <option value="cash on delivery">الدفع عند الاستلام</option>
+                <option value="credit card">بطاقه ائتمان</option>
+                <option value="paypal">بيبال</option>
+             </select>
+          </div>
+          <div class="inputBox">
+             <span>العنوان 01 :</span>
+             <input type="text" name="flat" class="box" required placeholder="الحي - الشارع" maxlength="50">
+          </div>
+          <div class="inputBox">
+             <span>العنوان 02 :</span>
+             <input type="text" name="street" class="box" required placeholder="الشارع" maxlength="50">
+          </div>
+          <div class="inputBox">
+             <span>الرقم السري :</span>
+             <input type="number" name="pin_code" class="box" required placeholder="مثل 123456" min="0">
+          </div>
+       </div>
+ 
+       <input type="submit" value="اطلب" class="btn" name="order">
+ 
+    </form>
+ 
+ </section>
+ 
+ <!-- order section ends -->
+ 
+ 
+ 
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+<h1 class="heading"> <span> اراء</span> العملاء  </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+        <div class="user">
+            <img src="images/pic-1.png" alt="">
+            <div class="user-info">
+                <h3>علي</h3>
+                <span>عميل سعيد</span>
+            </div>
+        </div>
+     </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+        <div class="user">
+            <img src="images/pic-2.png" alt="">
+            <div class="user-info">
+                <h3>ريم</h3>
+                <span>عميل سعيد</span>
+            </div>
+        </div>
+     </div>
+
+    <div class="box">
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+        <div class="user">
+            <img src="images/pic-3.png" alt="">
+            <div class="user-info">
+                <h3>محمد</h3>
+                <span>عميل سعيد</span>
+            </div>
+        </div>
+     </div>
+
+</div>
+    
+</section>
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span> تواصل </span>معنا</h1>
+
+    <div class="row">
+
+        <form action="">
+            <input type="text" placeholder="الاسم" class="box">
+            <input type="email" placeholder="اليربد الالكتروني" class="box">
+            <input type="number" placeholder="الرقم" class="box">
+            <textarea name="" class="box" placeholder="الرسالة" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="أرسل" class="btn">
+        </form>
+
+        <div class="image">
+            <img src="images/contact-img.svg" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>روابط سريعه</h3>
+            <a href="#">الرئسية</a>
+            <a href="#">من نحن</a>
+            <a href="#">منتجاتنا</a>
+            <a href="#">اراء العملاء</a>
+            <a href="#">تواصل معنا</a>
+        </div>
+
+        <div class="box">
+            <h3>روابط اضافيه</h3>
+            <a href="#">حسابي</a>
+            <a href="#">طلباتي</a>
+            <a href="#">مفضلتي</a>
+        </div>
+
+       
+
+        <div class="box">
+            <h3>تواصل</h3>
+            <a href="#">+996-456-7890</a>
+            <a href="#">example@gmail.com</a>
+            <a href="#"> المملكه العربيه السعوديه</a>
+            <img src="images/payment.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="credit">  <span> جميع الحقوق محفوظه </span>  </div>
+
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+    
+</body>
+</html>
